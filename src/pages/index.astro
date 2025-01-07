@@ -1,41 +1,51 @@
 ---
 // component script
-import Main from "../layouts/Main.astro";
-const profilePicture = "/julian-henke-U56HxrFAy6s-unsplash.jpg"
+import Main from '../layouts/Main.astro';
+const profilePicture = '/images/julian-henke-U56HxrFAy6s-unsplash.jpg';
 ---
 
-
-<Main>
-	<div class="profile">
-		<img src={profilePicture} alt="Modern guy" width="200px" height="200px" class="profile__picture" />
-		<div class="profile__details">
-			<h1>Vandal</h1>
-			<h2>Doing stuff he pleases</h2>
-			<p>With no consideration for what people think</p>
-		</div>
-	</div>
+<Main title="Vandal">
+  <div class="profile">
+    <img
+      src={profilePicture}
+      alt="Modern guy"
+      width="200px"
+      height="200px"
+      class="profile__picture"
+    />
+    <div class="profile__details">
+      <h1>Vandal</h1>
+      <h2>Doing what he pleases</h2>
+      <p>
+        With no consideration for what people think, he does what will make hes
+        day better
+      </p>
+    </div>
+  </div>
 </Main>
 
-
 <style>
-	.profile {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		padding: 1rem 0 3rem 0
-	}
+  .profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0 3rem 0;
+  }
 
-	.profile__details {
-		/* flex: 1 0 300px; */
-	}
+  .profile__details {
+    flex: 1 0 auto;
+  }
 
-	.profile__details > h1 {
-		margin-top: 0;
-	}
+  .profile__details > h1 {
+    margin-top: 0;
+  }
 
-	.profile__picture {
-		border-radius: 50%;
-		margin: 0 2rem 1rem 0
-	}
+  .profile__picture {
+    border-radius: 50%;
+    margin: 0 2rem 1rem 0;
+  }
 </style>
+
+<script>
+  console.log('Hello world');
+</script>
