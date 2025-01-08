@@ -7,6 +7,7 @@ import ThemeToggler from './ThemeToggler.astro';
     <li><a href="/">Home</a></li>
     <li><a href="/the-good-times">The Good Times</a></li>
     <li><a href="/the-rush">The Rush</a></li>
+    <li><a href="/the-bad-times">The Bad Times</a></li>
   </ul>
 
   <ThemeToggler />
@@ -40,4 +41,21 @@ import ThemeToggler from './ThemeToggler.astro';
   a:hover {
     color: var(--grey-900);
   }
+
+  a.active {
+    background: var(--grey-900);
+    color: var(--background);
+  }
 </style>
+
+<script>
+  const { pathname } = window.location;
+
+  const activeNavigationElement = document.querySelector(
+    `nav a[href="${pathname}"]`
+  );
+
+  if (activeNavigationElement) {
+    activeNavigationElement.classList.add('active');
+  }
+</script>
